@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- stylesheet -->
+		<link rel="stylesheet" href="./assets/style.css" />
+		<!-- web font -->
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,300&display=swap");
+		</style>
+		<title>Aeon's cheet-sheet</title>
+	</head>
+	<body>
+		<header>
+			<h1>Web Fonts</h1>
+			<p>
+				A web font is any font used in a website’s design that isn’t installed
+				by default on the end user’s device—a counterpart to a system font.
+			</p>
+			<p>
+				Online font services, like Google Fonts, make it easy to find and link
+				to fonts from your site.
+			</p>
+		</header>
+		<section id="link-section">
+			<h2>Link</h2>
+			<p>
+				When selecting a font and its styles, you can review your selected font
+				family, and a <span class="code">&lt;link&gt;</span> element will be
+				automatically generated.
+			</p>
+			<div>
+				<b>Apply web font via link</b>
+				<br />
+				<code class="code">
+					&lt;head&gt;
+					<!-- Add the link element for Google Fonts along with other metadata -->
+					&lt;link
+					href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+					rel="stylesheet" /&gt;&lt;/head&gt;
+				</code>
+				<br />
+				<p>
+					The generated <span class="code">&lt;link /&gt;</span> element needs
+					to be added to the <span class="code">&lt;head&gt;</span> element in
+					the HTML document for it to be ready to be used in the CSS stylesheet.
+				</p>
+				<br />
+				<code class="code">p { font-family: 'Roboto', sans-serif; }</code>
+			</div>
+			<!-- Syntax -->
+			<h3>Syntax</h3>
+		</section>
+		<section id="import-section">
+			<h2>@import</h2>
+		</section>
+		<section id="fontface-section">
+			<h2>@font-face</h2>
+			<p>
+				Add a web font to the document with the
+				<a
+					href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"
+					target="_blank"
+					><span class="code">@font-face</span></a
+				>
+				property and the path to the font's source.
+			</p>
+			<!-- Syntax -->
+			<div class="">
+				<b>Use of <span>@font-face</span> rulset</b>
+				<br />
+				<code class="code">
+					@font-face { font-family: 'MyParagraphFont'; src:
+					url('fonts/Roboto.woff2') format('woff2'), url('fonts/Roboto.woff')
+					format('woff'), url('fonts/Roboto.ttf') format('truetype'); }
+				</code>
+				<p>
+					Once the <span class="code">@font-face</span> ruleset is defined, you
+					can use the font in your stylesheet!
+				</p>
+				<code class="code">
+					p { font-family: 'MyParagraphFont', sans-serif; }
+				</code>
+			</div>
+			<!-- Font formats -->
+			<h3>Font formats</h3>
+			<p>
+				Fonts can be downloaded just like any other file on the web. They come
+				in a few different file formats, such as:
+			</p>
+			<ul>
+				<li>OTF (OpenType Font)</li>
+				<li>TTF (TrueType Font)</li>
+				<li>WOFF (Web Open Font Format)</li>
+				<li>WOFF2 (Web Open Font Format 2)</li>
+			</ul>
+
+			<div class="note-container">
+				<b>Note</b>
+				<br />
+				<p>
+					The different formats are a progression of standards for how fonts
+					will work with different browsers, with WOFF2 being the most
+					progressive. It’s a good idea to include TTF, WOFF, and WOFF2 formats
+					with your <span class="code">@font-face</span> rule to ensure
+					compatibility on all browsers.
+				</p>
+			</div>
+			<!-- Apply font-face -->
+			<h3>Apply @font-face</h3>
+		</section>
+		<section id="web-font-services">
+			<h2>Web Font Services</h2>
+			<ul>
+				<li>
+					<a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+				</li>
+				<li>
+					<a href="https://www.typography.com/" target="_blank"
+						>Cloud Typography</a
+					>
+				</li>
+				<li>
+					<a href="https://fonts.adobe.com/?ref=tk.com" target="_blank"
+						>Adobe Fonts</a
+					>
+				</li>
+				<li>
+					<a href="https://www.fontspring.com/" target="_blank">Fontspring</a>
+				</li>
+				<li>
+					<a href="https://www.typotheque.com/" target="_blank">Typotheque</a>
+				</li>
+				<li><a href="https://fonts.com/" target="_blank">Fonts.com</a></li>
+				<li>
+					<a href="https://www.fontsquirrel.com/" target="_blank"
+						>Font Squirrel</a
+					>
+				</li>
+			</ul>
+		</section>
+		<footer></footer>
+	</body>
+</html>
